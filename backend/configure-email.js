@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('📧 Email Configuration Helper');
+console.log(' Email Configuration Helper');
 console.log('==============================\n');
 
 // Get user input for email configuration
@@ -42,27 +42,27 @@ JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
         const envPath = path.join(__dirname, '.env');
         fs.writeFileSync(envPath, envContent);
         
-        console.log('\n✅ .env file updated successfully!');
-        console.log('\n📧 Email Configuration:');
+        console.log('\n.env file updated successfully!');
+        console.log('\n Email Configuration:');
         console.log('========================');
         console.log('Email User:', email || 'your-email@gmail.com');
         console.log('From Name:', fromName || 'Lost & Found');
         console.log('Frontend URL:', frontendUrl || 'http://localhost:5173');
         
         if (!email || !password) {
-          console.log('\n⚠️  IMPORTANT: You need to configure your email settings!');
-          console.log('\n🔧 To configure Gmail:');
+          console.log('\n  IMPORTANT: You need to configure your email settings!');
+          console.log('\n To configure Gmail:');
           console.log('1. Go to your Google Account settings');
           console.log('2. Enable 2-factor authentication');
           console.log('3. Go to Security → App passwords');
           console.log('4. Generate a new app password for "Mail"');
           console.log('5. Edit the .env file with your credentials');
         } else {
-          console.log('\n🚀 Email is configured! Restart your server to apply changes.');
+          console.log('\n Email is configured! Restart your server to apply changes.');
           console.log('Run: npm run dev');
         }
         
-        console.log('\n📱 Note: Even without email, users will get in-app notifications.');
+        console.log('\n Note: Even without email, users will get in-app notifications.');
         
         rl.close();
       });
